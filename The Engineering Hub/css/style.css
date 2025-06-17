@@ -44,13 +44,11 @@ header {
 
 
 .logo img {
-  height: 15rem; 
-  width: auto;
-  object-fit: contain;
-  display: block;
-  margin-left: 0;
+  height: auto;
+  max-height: 120px;
+  width: 100%;
+  max-width: 200px;
 }
-
 
 
 nav ul {
@@ -793,7 +791,7 @@ nav li {
   color: white;
   text-align: center;
   padding: 1rem;
-  margin: 0;         /* 🔁 Important */
+  margin: 0;
   border: none; 
     }
 
@@ -807,3 +805,60 @@ nav li {
         height: 100px;
       }
     }
+    /* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .logo img {
+    height: 100px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .full-hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .full-hero-left,
+  .full-hero-right {
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .full-hero-right {
+    left: 0;
+    top: 0;
+    transform: none;
+    margin-top: 1rem;
+  }
+
+  .about-split {
+    flex-direction: column;
+  }
+
+  .split-left,
+  .split-right {
+    flex: 1 1 100%;
+  }
+
+  .grid-section {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .form-modern input,
+  .form-modern textarea {
+    width: 100%;
+  }
+}

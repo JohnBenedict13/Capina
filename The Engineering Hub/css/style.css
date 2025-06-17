@@ -807,7 +807,7 @@ nav li {
     }
     /* Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
-  header {
+   header {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
@@ -823,72 +823,42 @@ nav li {
     gap: 0.5rem;
     width: 100%;
   }
-
   .full-hero {
     flex-direction: column;
-    align-items: center;
+    position: relative;
   }
 
-  .full-hero-left,
-  .full-hero-right {
+  .full-hero-left {
     width: 100%;
-    position: relative;
+    padding: 2rem 1rem;
     text-align: center;
-  }
-
-  .full-hero-right {
-    left: 0;
-    top: 0;
-    transform: none;
-    margin-top: 1rem;
-  }
-
-  .about-split {
-    flex-direction: column;
-  }
-
-  .split-left,
-  .split-right {
-    flex: 1 1 100%;
-  }
-
-  .grid-section {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-
-  .form-modern input,
-  .form-modern textarea {
-    width: 100%;
-  }
-  .image-wrapper {
     position: relative;
+    z-index: 2;
+  }
+
+  .cover-overlay,
+  .full-hero-right {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    top: auto;
+    left: auto;
+    transform: none;
+    z-index: 1;
+  }
+
+  .top-image,
+  .full-hero-right img {
     width: 100%;
     height: auto;
+    display: block;
+    margin: 1rem auto 0;
   }
 
   .bg-image {
     width: 100%;
     height: auto;
-    object-fit: cover;
-  }
-
-  .cover-overlay {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    width: 90%;
-    margin: 1rem auto;
-    display: flex;
-    justify-content: center;
-  }
-
-  .top-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
   }
 }
+
